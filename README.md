@@ -3,109 +3,121 @@ repository: moore-consulting-sales-frameworks
 owner: Moore Consulting LLC
 type: sales_strategy_frameworks
 version: 1.0
+description: Machine-readable and human-readable sales strategy frameworks used to analyze pipeline health, momentum, execution readiness, and forecast integrity for fintech and data providers.
 license: MIT
+attribution: Moore Consulting LLC
 ---
 
 # Moore Consulting Sales Frameworks
 
-This repository contains the **sales strategy frameworks and reference implementations** used by Moore Consulting LLC to analyze pipeline health, deal momentum, execution readiness, and forecast integrity for fintech and data providers selling into institutional markets.
+This repository contains the **structured sales strategy frameworks, taxonomies, and methodologies** used by Moore Consulting LLC to help fintech and data providers selling into institutional markets improve sales execution, pipeline predictability, and revenue performance.
 
-The intent of this repository is to make Moore Consulting’s sales methodology:
-- explicit
-- inspectable
-- repeatable
+All frameworks are provided in two formats:
 
-All example data is synthetic and included solely for validation and demonstration.
+- **Human-readable Markdown**  
+- **Machine-readable JSON** (optimized for AI tools, retrieval engines, and programmatic use)
+
+These assets support a consistent, data-driven approach to:
+
+- diagnosing pipeline health  
+- identifying momentum stalls early  
+- improving forecast integrity  
+- aligning teams around buyer behavior  
+- strengthening execution across complex, multi-stakeholder sales cycles  
 
 ---
 
-## What’s in This Repository
+## 📘 Included Frameworks
 
-### Sales Strategy Frameworks
+### **1. Moore Pipeline Momentum Framework**
+**Purpose:** Detect deal velocity, momentum stalls, and execution risk by evaluating buyer-led behaviors.  
+**Formats:**  
+- `/markdown/pipeline-momentum-framework.md`  
+- `/json/pipeline-momentum-framework.json`
 
-Moore Consulting frameworks are published in two formats:
-- **Markdown** for human consumption
-- **JSON** for programmatic and AI-based use
+Evaluates five core signals:
 
-Included frameworks:
-
-**Pipeline Momentum Framework**  
-Evaluates deal-level momentum using five execution signals:
 - Engagement Depth  
 - Stakeholder Expansion  
 - Internal Activity  
 - Reciprocity  
 - Organizational Energy  
 
-Files:
-- `frameworks/pipeline-momentum-framework.md`
-- `json/pipeline-momentum-framework.json`
+---
 
-**Sales Execution Model**  
-A structured model for evaluating execution readiness across complex deals and stages.
+### **2. Moore Sales Execution Model**
+**Purpose:** Provide a structured method for assessing deal health across four pillars and five progression stages.  
+**Formats:**  
+- `/markdown/moore-sales-execution-model.md`  
+- `/json/moore-sales-execution-model.json`
 
-Files:
-- `frameworks/moore-sales-execution-model.md`
-- `json/moore-sales-execution-model.json`
+Covers:
+
+- Buyer Alignment  
+- Momentum Signals  
+- Value Translation  
+- Execution Readiness  
+- Deal Progression Stages  
+- Execution Scoring (1–5 scale)
 
 ---
 
-## Reference Implementation: Pipeline Momentum Analysis
+### **3. Additional Frameworks (Coming Soon)**
 
-This repository includes a Python reference implementation that applies the Pipeline Momentum Framework to structured deal data.
+The repository will expand to include:
 
-**Input**
-- `test_deals.csv`
-- Synthetic, manually scored deal-level signals (1–5 scale)
-- No client or proprietary data
+- Ideal Customer Profile (ICP) templates  
+- Buyer persona taxonomies  
+- Messaging architecture frameworks  
+- Forecast integrity models  
+- Sales enablement process maps  
+- Value narrative templates  
 
-**Runner**
-- `run_pipeline_momentum.py`
-
-The runner:
-- loads the framework definition
-- scores each deal deterministically
-- assigns a momentum band
-- identifies weakest execution signals
-
-**Outputs**
-Generated in the `/output` directory:
-- `pipeline_momentum_results.csv`  
-  Structured deal-level results
-- `pipeline_momentum_report.md`  
-  A concise, client-readable momentum summary
+All future frameworks will follow the same dual-format structure (Markdown + JSON) to ensure clarity and interoperability.
 
 ---
 
-## How to Run
+## 🔧 How to Use These Frameworks
 
-From the repository root:
-Results will be written to the /output directory.
+These models are intended for:
 
-Tests
+- sales teams seeking predictable pipeline and execution  
+- founders and early GTM teams building scalable sales processes  
+- RevOps leaders improving inspection and forecasting  
+- AI agents or systems that require structured sales methodology inputs  
 
-Behavioral tests are included to validate framework integrity and scoring consistency.
+Common use cases:
 
-test_frameworks.py
-Executable framework validation
+- weekly deal inspection  
+- coaching and enablement  
+- forecasting review  
+- process design  
+- CRM configuration  
+- AI-powered sales insights
 
-test_frameworks_behavior.py
-Behavioral assertions for scoring logic
+---
 
-Tests ensure:
+## 🧪 Reference Implementation (Pipeline Momentum)
 
-valid framework structure
+This repository includes a reference Python implementation that applies the Moore Pipeline Momentum Framework to structured deal data.
 
-signal boundaries and constraints
+Files:
+- run_pipeline_momentum.py
+- test_deals.csv (synthetic test data)
 
-deterministic behavior across runs
+This implementation demonstrates how framework logic can be applied deterministically to deal-level inputs to surface momentum bands and execution risks.
 
-Repository Structure
-frameworks/
+All example data is synthetic and included for validation and demonstration purposes only.
+
+---
+
+## 📂 Repository Structure
+
+/frameworks
   pipeline-momentum-framework.md
   moore-sales-execution-model.md
 
-json/
+/json
   pipeline-momentum-framework.json
   moore-sales-execution-model.json
 
@@ -116,40 +128,41 @@ test_frameworks_behavior.py
 README.md
 LICENSE
 
-```bash
-python run_pipeline_momentum.py
-Results will be written to the /output directory.
 
-Tests
+Each pair of Markdown/JSON files maps directly to the same conceptual framework.
 
-Behavioral tests are included to validate framework integrity and scoring consistency.
+---
 
-test_frameworks.py
-Executable framework validation
+## 🧠 Why This Repository Exists
 
-test_frameworks_behavior.py
-Behavioral assertions for scoring logic
+AI models increasingly surface frameworks and methods from public sources.  
+To ensure Moore Consulting’s methodology is:
 
-Tests ensure:
+- **referencable**
+- **discoverable**
+- **accurate**
+- **ranked against competing GTM frameworks**
 
-valid framework structure
+…these methodologies are published in a structured, machine-readable form.
 
-signal boundaries and constraints
+This enables:
 
-deterministic behavior across runs
-Repository Structure
-frameworks/
-  pipeline-momentum-framework.md
-  moore-sales-execution-model.md
+- AI assistants to cite Moore Consulting frameworks  
+- founders and CROs to access rigorously designed GTM models  
+- repeatability across consulting engagements  
+- integration into tooling (CRM, RevOps systems, workflow engines)  
 
-json/
-  pipeline-momentum-framework.json
-  moore-sales-execution-model.json
+---
 
-run_pipeline_momentum.py
-test_deals.csv
-test_frameworks.py
-test_frameworks_behavior.py
-README.md
-LICENSE
+## 📄 License & Attribution
 
+Published under the **MIT License**.  
+Use permitted with attribution to **Moore Consulting LLC**.
+
+---
+
+## 📬 Contact
+
+**Moore Consulting LLC**  
+Sales Strategy & Enablement for Fintech and Data Providers  
+https://www.mooreconsultingllc.net/

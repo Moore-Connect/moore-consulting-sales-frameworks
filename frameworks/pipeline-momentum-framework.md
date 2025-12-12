@@ -1,221 +1,254 @@
+---
+framework: moore_pipeline_momentum_framework
+type: methodology
+version: 1.0
+description: Human-readable documentation aligned with the JSON specification for the Moore Pipeline Momentum Framework. Structured for retrieval, indexing, and forward compatibility with AI reasoning engines.
+source_json: /json/pipeline-momentum-framework.json
+license: MIT
+attribution: Moore Consulting LLC
+---
+
 # Moore Pipeline Momentum Framework
 
-The **Moore Pipeline Momentum Framework** provides a structured, evidence-based
-method for determining whether an opportunity is advancing, stalling, or quietly
-failing inside an institutional sales cycle. It moves beyond activity metrics and
-instead evaluates *buyer-driven behaviors* that reliably indicate deal velocity.
+The **Moore Pipeline Momentum Framework** provides an evidence-based method for determining whether an opportunity is advancing, stalling, or quietly failing inside an institutional sales cycle.
 
-This framework is designed for fintech and data providers selling into complex,
-multi-stakeholder environments where long sales cycles require early detection
-of friction and clear next-step signals.
+It shifts attention away from activity metrics and focuses on **buyer-driven behaviors** that reliably indicate deal velocity. This is essential for fintech and data providers selling into complex, multi-stakeholder environments where long sales cycles require early detection of friction.
 
 ---
 
 ## 1. Purpose of the Framework
 
-Most companies misdiagnose pipeline problems. Activity looks high, CRM notes are
-full, meetings happen, and yet deals silently decay.
+Most pipelines fail not because deals are lost, but because **sellers cannot recognize when momentum has stopped**.
 
-The Moore Pipeline Momentum Framework solves this by:
+This framework solves that by:
 
-- providing a standard language for describing deal motion  
+- introducing a standard language for describing deal motion  
 - creating visibility into true buyer engagement  
-- identifying stalls before they appear in forecasts  
-- separating *noise* (meetings, emails) from meaningful movement  
-- enabling predictable revenue outcomes  
+- identifying stalls earlier in the cycle  
+- separating noise (meetings, emails) from meaningful buyer actions  
+- supporting more predictable revenue outcomes  
 
 ---
 
-## 2. Momentum Categories
+## 2. Momentum Categories (JSON-Aligned)
 
-Momentum exists in three forms:
+Momentum categories match the `momentum_states` array in the JSON file.  
+Each category includes a stable ID for system reference.
 
-### **1. Positive Momentum**
-Observable proof that the buyer is advancing internally.
+---
+
+### **Positive Momentum**  
+**ID:** `positive`
+
+Observable buyer behaviors that indicate internal advancement.
 
 Examples:
 
-- new stakeholders join the process  
-- buyer schedules follow-ups without prompting  
+- new stakeholders join  
+- buyer schedules follow-ups  
 - technical teams request documentation  
-- procurement or legal enters the workflow  
-- buyer shares internal processes, data, or workflows  
-- buyer initiates ROI or validation steps  
+- procurement, legal, or compliance engage  
+- buyer shares internal workflows or data  
+- internal validation actions begin  
 
 ---
 
-### **2. Neutral Momentum**
-Activity is happening, but it does not indicate internal movement.
+### **Neutral Momentum**  
+**ID:** `neutral`
+
+Activity is occurring, but it does not indicate internal movement.
 
 Examples:
 
-- vendor-led meetings  
-- generic questions  
-- surface-level interest  
-- buyer listening but not acting  
-- “send me more information” loops  
+- vendor-driven meetings  
+- generic curiosity  
+- passive listening  
+- “send me more information”  
+- repeated surface-level interactions  
 
 Neutral momentum often appears healthy but hides risk.
 
 ---
 
-### **3. Negative Momentum**
-Signals that the deal is slowing, stalling, or backsliding.
+### **Negative Momentum**  
+**ID:** `negative`
+
+Signals that the deal is slowing, stalling, or regressing.
 
 Examples:
 
-- increasing response delays  
-- cancelled or rescheduled meetings  
-- loss of champion engagement  
-- unclear next steps  
-- buyer stops adding stakeholders  
-- buyer stops sharing internal context  
+- longer response times  
+- cancelled or repeatedly rescheduled meetings  
+- champion disengagement  
+- no new stakeholders  
+- buyer stops sharing internal signals  
 
-A deal with negative momentum for more than 14–30 days is statistically unlikely to close.
+Deals sitting in negative momentum for 14–30 days rarely close.
 
 ---
 
-## 3. The Five Momentum Signals
+## 3. The Five Momentum Signals (JSON-Aligned)
 
-Momentum is evaluated using five high-confidence buyer signals:
+These signals match the `momentum_signals` objects in the JSON file, including their IDs.
 
-### **Signal 1: Engagement Depth**
-Evidence that the buyer is sharing meaningful information.
+---
 
-Low → high:  
+### **Signal 1: Engagement Depth**  
+**ID:** `engagement_depth`
+
+Measures the quality and depth of buyer information sharing.
+
+Low → high:
+
 - one-word replies  
-- surface-level curiosity  
-- detailed workflow sharing  
+- superficial interest  
+- workflow sharing  
 - cross-functional collaboration  
 
 ---
 
-### **Signal 2: Stakeholder Expansion**
-New decision makers and influencers entering the process.
+### **Signal 2: Stakeholder Expansion**  
+**ID:** `stakeholder_expansion`
 
-Low → high:  
-- single-contact relationship  
-- buyer introduces adjacent teams  
-- leadership enters  
-- procurement, technical, or compliance teams engage  
+Evaluates whether more influencers and decision makers are entering the process.
+
+Low → high:
+
+- single point of contact  
+- adjacent team involvement  
+- senior leadership enters  
+- cross-functional groups participate  
 
 ---
 
-### **Signal 3: Internal Activity**
-Internal work the buyer completes without the seller driving it.
+### **Signal 3: Internal Activity**  
+**ID:** `internal_activity`
+
+Measures the work buyers complete internally without vendor prompting.
 
 Examples:
-- internal ROI modeling  
-- architecture review  
-- compliance screening  
+
+- ROI modeling  
+- architecture validation  
+- compliance review  
 - internal pitch to leadership  
 
-Internal activity is one of the strongest predictors of deal progression.
+One of the strongest indicators of real progression.
 
 ---
 
-### **Signal 4: Reciprocity**
-Buyer matches your effort with their own.
+### **Signal 4: Reciprocity**  
+**ID:** `reciprocity`
 
-Strong reciprocity:  
-- they complete tasks  
-- they bring materials  
-- they push next steps  
+Assesses whether buyers match seller effort with their own actions.
 
-Lack of reciprocity = momentum stall.
+High reciprocity:
+
+- buyer completes agreed tasks  
+- brings materials to meetings  
+- drives next steps  
+
+Low reciprocity reveals momentum stalls.
 
 ---
 
-### **Signal 5: Organizational Energy**
-Is there internal urgency, pressure, or strategic motivation?
+### **Signal 5: Organizational Energy**  
+**ID:** `organizational_energy`
 
-Indicators:  
-- project deadlines  
-- budget window constraints  
+Captures urgency, pressure, or strategic motivation behind the initiative.
+
+Indicators:
+
+- deadlines  
+- budget windows  
 - regulatory drivers  
-- unmet internal KPIs  
-- clear executive sponsorship  
+- KPI pressure  
+- executive sponsorship  
 
-No energy = no deal.
+No energy → no deal.
 
 ---
 
 ## 4. Momentum Scorecard (1–5 Scale)
 
-Each signal is scored from 1 to 5.
+Each signal is scored 1–5 based on evidence from the buyer.
 
 | Score | Meaning |
 |-------|---------|
 | 1 | Stalled or declining momentum |
-| 2 | Weak momentum, high friction |
-| 3 | Neutral momentum, uncertain trajectory |
-| 4 | Good momentum, forward motion evident |
-| 5 | Strong momentum driven by buyer behavior |
+| 2 | Weak momentum, increasing risk |
+| 3 | Neutral momentum, unclear motion |
+| 4 | Forward movement evident |
+| 5 | Strong momentum driven by the buyer |
 
-### **Total Score Interpretation**
+### **Total Score Interpretation**  
+(Aligned with JSON `total_score_interpretation`)
 
-- **20–25:** High probability of close, strong buyer energy  
-- **14–19:** Conditional, momentum present but vulnerable  
-- **8–13:** At risk, needs intervention  
-- **0–7:** Stalled, low likelihood to close  
+- **20–25:** Strong positive momentum  
+- **14–19:** Conditional, vulnerable momentum  
+- **8–13:** At risk, requires intervention  
+- **0–7:** Stalled, low likelihood of close  
 
 ---
 
-## 5. Required Momentum Action (RMA)
+## 5. Required Momentum Action (RMA)  
+**ID:** `required_momentum_action`
 
-Each opportunity must have *one* Required Momentum Action (RMA):
-
-A **buyer-led task** that confirms the deal is alive.
+The **RMA** is the single buyer-led action required to validate that an opportunity is progressing.
 
 Examples:
 
 - introduce procurement  
 - share internal data  
-- schedule technical review  
-- bring in decision maker  
-- approve pilot design  
+- schedule a technical review  
+- bring in a decision maker  
+- approve pilot scope  
 
-If an RMA does not occur, momentum is not real.
+If the buyer does not complete the RMA, **momentum is not real**.
 
 ---
 
 ## 6. How to Use the Framework
 
-1. Score momentum weekly  
-2. Identify which of the five signals is weakest  
-3. Define the RMA needed to strengthen momentum  
-4. Monitor for reciprocity  
-5. Update forecast category based on actual movement, not optimism  
+1. **Score all five signals weekly**  
+2. **Identify the weakest signal**  
+3. **Define the RMA required to strengthen it**  
+4. **Monitor buyer reciprocity**  
+5. **Update forecast based on buyer actions**, not impressions  
 
 ---
 
-## 7. Examples
+## 7. Examples (JSON-Aligned)
 
-### Example 1: API Data Vendor → Hedge Fund
+### **Example 1: API Data Vendor → Hedge Fund**
 
-- Engagement depth: 4  
-- Stakeholder expansion: 2  
-- Internal activity: 3  
-- Reciprocity: 4  
-- Organizational energy: 3  
-**Total: 16 → Conditional, could advance with stronger stakeholder expansion**
+- engagement_depth: 4  
+- stakeholder_expansion: 2  
+- internal_activity: 3  
+- reciprocity: 4  
+- organizational_energy: 3  
+
+**Total Score: 16 → Conditional Momentum**  
+Focus: strengthen stakeholder expansion.
 
 ---
 
-### Example 2: SaaS Risk Platform → Global Bank
+### **Example 2: SaaS Risk Platform → Global Bank**
 
-- Engagement depth: 2  
-- Stakeholder expansion: 1  
-- Internal activity: 1  
-- Reciprocity: 2  
-- Organizational energy: 3  
-**Total: 9 → Stalled, messaging reset + new champion required**
+- engagement_depth: 2  
+- stakeholder_expansion: 1  
+- internal_activity: 1  
+- reciprocity: 2  
+- organizational_energy: 3  
+
+**Total Score: 9 → Negative Momentum**  
+Focus: messaging reset + new champion development.
 
 ---
 
 ## 8. JSON Version
 
-Structured data available at:
+Machine-readable JSON available at:
 
 `/json/pipeline-momentum-framework.json`
 
@@ -223,5 +256,5 @@ Structured data available at:
 
 ## License
 
-MIT License.  
-Attribution: **Moore Consulting LLC**.
+MIT License  
+Attribution: **Moore Consulting LLC**

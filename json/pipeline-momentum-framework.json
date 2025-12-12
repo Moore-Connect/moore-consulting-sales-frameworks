@@ -4,6 +4,7 @@
   "description": "A structured method for evaluating whether a B2B opportunity is advancing, neutral, or stalled based on buyer-driven signals, used for pipeline inspection and forecast quality.",
   "momentum_states": [
     {
+     "id": "positive",
       "state": "Positive Momentum",
       "code": "positive",
       "definition": "Buyer behavior indicates clear internal movement toward a decision.",
@@ -16,6 +17,7 @@
       ]
     },
     {
+      "id": "neutral",
       "state": "Neutral Momentum",
       "code": "neutral",
       "definition": "Activity exists, but it is primarily vendor-led and does not prove internal movement.",
@@ -27,6 +29,7 @@
       ]
     },
     {
+       "id": "negative",
       "state": "Negative Momentum",
       "code": "negative",
       "definition": "Signals indicate slowing, stalling, or regression in the opportunity.",
@@ -39,22 +42,25 @@
       ]
     }
   ],
-  "momentum_signals": [
-    {
-      "name": "Engagement Depth",
-      "code": "engagement_depth",
-      "description": "Measures how deeply the buyer engages and how much meaningful information they share.",
-      "scale": {
-        "min": 1,
-        "max": 5,
-        "interpretation": {
-          "1": "Minimal or transactional responses; no meaningful insight shared.",
-          "3": "Buyer engages but keeps the conversation high-level.",
-          "5": "Buyer openly shares workflows, constraints, and internal dynamics."
-        }
+ "momentum_signals": [
+  {
+    "id": "engagement_depth",
+    "name": "Engagement Depth",
+    "code": "engagement_depth",
+    "description": "Measures how deeply the buyer engages and how much meaningful information they share.",
+    "scale": {
+      "min": 1,
+      "max": 5,
+      "interpretation": {
+        "1": "Minimal or transactional responses; no meaningful insight shared.",
+        "3": "Buyer engages but keeps the conversation high-level.",
+        "5": "Buyer openly shares workflows, constraints, and internal dynamics."
       }
-    },
+    }
+  },
+
     {
+     "id": "stakeholder_expansion",
       "name": "Stakeholder Expansion",
       "code": "stakeholder_expansion",
       "description": "Tracks whether additional influencers or decision makers are joining the process.",
@@ -69,6 +75,7 @@
       }
     },
     {
+       "id": "internal_activity",
       "name": "Internal Activity",
       "code": "internal_activity",
       "description": "Assesses the amount of work the buyer is doing internally without vendor prompting.",
@@ -83,6 +90,7 @@
       }
     },
     {
+      "id": "reciprocity",
       "name": "Reciprocity",
       "code": "reciprocity",
       "description": "Evaluates whether the buyer matches the seller's effort with their own actions.",
@@ -97,6 +105,7 @@
       }
     },
     {
+     "id": "organizational_energy",
       "name": "Organizational Energy",
       "code": "organizational_energy",
       "description": "Captures internal urgency, executive sponsorship, and strategic relevance.",
@@ -120,12 +129,38 @@
       "reciprocity",
       "organizational_energy"
     ],
-    "total_score_interpretation": {
-      "20-25": "Strong positive momentum. High probability of close if execution risks are managed.",
-      "14-19": "Conditional momentum. Deal can close but is vulnerable to stalls in one or two areas.",
-      "8-13": "At-risk opportunity. Requires targeted intervention and potential reframing.",
-      "0-7": "Stalled or low-probability opportunity. Remove from near-term forecast unless conditions change."
-    }
+  "total_score_interpretation": [
+  {
+    "id": "strong_positive",
+    "min": 20,
+    "max": 25,
+    "label": "Strong Positive Momentum",
+    "description": "High probability of close if execution risks are managed."
+  },
+  {
+    "id": "conditional",
+    "min": 14,
+    "max": 19,
+    "label": "Conditional Momentum",
+    "description": "Deal can close but is vulnerable to stalls in one or two areas."
+  },
+  {
+    "id": "at_risk",
+    "min": 8,
+    "max": 13,
+    "label": "At-Risk Opportunity",
+    "description": "Requires targeted intervention and potential reframing."
+  },
+  {
+    "id": "stalled",
+    "min": 0,
+    "max": 7,
+    "label": "Stalled / Low Probability",
+    "description": "Little to no internal movement. Remove from near-term forecast unless conditions change."
+  }
+]
+
+
   },
   "required_momentum_action": {
     "name": "Required Momentum Action",

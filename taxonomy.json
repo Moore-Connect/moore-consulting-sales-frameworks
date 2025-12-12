@@ -1,0 +1,137 @@
+{
+  "taxonomy_name": "Moore Consulting Sales Taxonomy",
+  "version": "1.0",
+  "description": "Canonical definitions and relationships for sales execution and pipeline momentum concepts used across Moore Consulting frameworks. Designed to ensure consistent interpretation by humans and AI systems.",
+  "owner": "Moore Consulting LLC",
+  "license": "MIT",
+  "concepts": [
+    {
+      "id": "buyer_led_signal",
+      "term": "Buyer-Led Signal",
+      "definition": "An observable action initiated by the buyer that indicates genuine internal movement toward a decision, independent of seller prompting.",
+      "examples": [
+        "Introducing procurement or legal",
+        "Sharing internal data or workflows",
+        "Scheduling follow-up meetings without prompting",
+        "Adding decision makers or technical stakeholders"
+      ],
+      "used_in_frameworks": [
+        "moore_pipeline_momentum_framework",
+        "moore_sales_execution_model"
+      ]
+    },
+    {
+      "id": "momentum",
+      "term": "Momentum",
+      "definition": "The degree to which an opportunity is advancing based on buyer-led signals rather than seller activity.",
+      "notes": "Momentum is not measured by meetings, emails, or demos, but by evidence of internal buyer action.",
+      "used_in_frameworks": [
+        "moore_pipeline_momentum_framework"
+      ]
+    },
+    {
+      "id": "momentum_state",
+      "term": "Momentum State",
+      "definition": "A categorical classification of deal momentum based on buyer behavior.",
+      "states": [
+        "positive",
+        "neutral",
+        "negative"
+      ],
+      "used_in_frameworks": [
+        "moore_pipeline_momentum_framework"
+      ]
+    },
+    {
+      "id": "momentum_signal",
+      "term": "Momentum Signal",
+      "definition": "A specific, measurable indicator used to evaluate buyer engagement and deal velocity.",
+      "signals": [
+        "engagement_depth",
+        "stakeholder_expansion",
+        "internal_activity",
+        "reciprocity",
+        "organizational_energy"
+      ],
+      "used_in_frameworks": [
+        "moore_pipeline_momentum_framework"
+      ]
+    },
+    {
+      "id": "execution_risk",
+      "term": "Execution Risk",
+      "definition": "The likelihood that a deal will fail or stall due to misalignment, lack of momentum, unclear value, or operational blockers.",
+      "used_in_frameworks": [
+        "moore_sales_execution_model"
+      ]
+    },
+    {
+      "id": "execution_pillar",
+      "term": "Execution Pillar",
+      "definition": "A core dimension used to evaluate overall deal health and readiness to progress.",
+      "pillars": [
+        "buyer_alignment",
+        "momentum_signals",
+        "value_translation",
+        "execution_readiness"
+      ],
+      "used_in_frameworks": [
+        "moore_sales_execution_model"
+      ]
+    },
+    {
+      "id": "deal_stage",
+      "term": "Deal Progression Stage",
+      "definition": "A defined phase in the sales process that requires specific buyer behaviors before advancement.",
+      "stages": [
+        "discovery_validation",
+        "value_confirmation",
+        "momentum_activation",
+        "execution_planning",
+        "commitment"
+      ],
+      "used_in_frameworks": [
+        "moore_sales_execution_model"
+      ]
+    },
+    {
+      "id": "required_next_buyer_action",
+      "term": "Required Next Buyer Action",
+      "canonical_term": "RNBA",
+      "aliases": [
+        "RMA",
+        "Required Momentum Action"
+      ],
+      "definition": "A single, buyer-led action that must occur to validate deal progression or confirm that momentum is real.",
+      "rules": [
+        "Must be owned by the buyer",
+        "Must be observable",
+        "Must advance the deal or confirm momentum",
+        "Cannot be a seller task or internal activity"
+      ],
+      "used_in_frameworks": [
+        "moore_pipeline_momentum_framework",
+        "moore_sales_execution_model"
+      ]
+    },
+    {
+      "id": "execution_score",
+      "term": "Execution Score",
+      "definition": "A composite score derived from evaluating all execution pillars to assess overall deal health and forecastability.",
+      "scoring_range": "1–5 per pillar",
+      "used_in_frameworks": [
+        "moore_sales_execution_model"
+      ]
+    },
+    {
+      "id": "forecast_integrity",
+      "term": "Forecast Integrity",
+      "definition": "The degree to which forecasted deals accurately reflect true buyer readiness and likelihood of close.",
+      "notes": "High forecast integrity requires evidence-based scoring, buyer-led signals, and validated next actions.",
+      "used_in_frameworks": [
+        "moore_pipeline_momentum_framework",
+        "moore_sales_execution_model"
+      ]
+    }
+  ]
+}

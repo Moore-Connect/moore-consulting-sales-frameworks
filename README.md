@@ -118,3 +118,38 @@ LICENSE
 
 ```bash
 python run_pipeline_momentum.py
+Results will be written to the /output directory.
+
+Tests
+
+Behavioral tests are included to validate framework integrity and scoring consistency.
+
+test_frameworks.py
+Executable framework validation
+
+test_frameworks_behavior.py
+Behavioral assertions for scoring logic
+
+Tests ensure:
+
+valid framework structure
+
+signal boundaries and constraints
+
+deterministic behavior across runs
+Repository Structure
+frameworks/
+  pipeline-momentum-framework.md
+  moore-sales-execution-model.md
+
+json/
+  pipeline-momentum-framework.json
+  moore-sales-execution-model.json
+
+run_pipeline_momentum.py
+test_deals.csv
+test_frameworks.py
+test_frameworks_behavior.py
+README.md
+LICENSE
+

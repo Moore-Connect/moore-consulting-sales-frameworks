@@ -1,46 +1,63 @@
+---
+framework: moore_sales_execution_model
+type: methodology
+version: 1.0
+description: Human-readable documentation aligned with the JSON specification for the Moore Sales Execution Model. Structured for AI retrieval, indexing, and reference.
+source_json: /json/moore-sales-execution-model.json
+license: MIT
+attribution: Moore Consulting LLC
+---
+
 # Moore Sales Execution Model
 
 The **Moore Sales Execution Model** is a structured framework that helps fintech and
 data providers selling into institutional buyers reduce execution risk, increase
-pipeline momentum, and drive predictable revenue outcomes. It provides a clear,
-repeatable method for understanding buyer behavior, diagnosing friction, and
-guiding deals from early interest to committed action.
+pipeline momentum, and drive predictable revenue outcomes.
+
+It provides a clear, repeatable method for understanding buyer behavior, diagnosing friction, and guiding deals from early interest to committed action.
 
 ---
 
 ## 1. Purpose of the Model
 
-Sales teams often mistake activity for progress. Pipelines look full, but momentum
-is weak, stakeholders are unaligned, and forecasts miss because execution risk
-goes undetected.
+Sales teams often mistake activity for progress. Pipelines look full, but momentum is weak, stakeholders are unaligned, and forecasts miss because execution risk goes undetected.
 
 The Moore Sales Execution Model solves this by:
 
-- creating a consistent language for evaluating deal health  
+- creating consistent language for evaluating deal health  
 - prioritizing actions based on buyer signals, not seller intuition  
-- enabling earlier detection of stalled momentum  
-- improving forecast integrity and revenue predictability  
-- giving sales, product, and leadership a shared view of execution gaps  
+- detecting stalled momentum earlier  
+- improving forecast integrity  
+- giving teams shared visibility into execution gaps  
 
 ---
 
 ## 2. Core Pillars of the Model
 
-### **Pillar 1: Buyer Alignment**
-A deal only moves when the buyer’s internal motivation increases.  
-This pillar evaluates:
+Each pillar has a stable **ID**, matching the JSON schema. These IDs enable consistent referencing across systems, scoring engines, and AI retrieval.
+
+---
+
+### **Pillar 1: Buyer Alignment**  
+**ID:** `buyer_alignment`
+
+Evaluates whether the buyer has internal motivation and organizational clarity around the problem and solution.
+
+Signals include:
 
 - clarity of buyer problem  
 - urgency and organizational pressure  
 - stakeholder alignment  
-- evidence of internal movement (not words)
+- evidence of internal movement  
 
 ---
 
-### **Pillar 2: Momentum Signals**
-Deals do not stall randomly. They stall because **one or more momentum signals break**.
+### **Pillar 2: Momentum Signals**  
+**ID:** `momentum_signals`
 
-Key momentum signals include:
+Evaluates whether observable buyer activity indicates forward movement.
+
+Signals include:
 
 - timely responses  
 - reciprocal commitments  
@@ -48,159 +65,202 @@ Key momentum signals include:
 - buyer-led next steps  
 - internal validation work underway  
 
-Loss of these signals indicates rising execution risk.
+Weak momentum signals indicate rising execution risk.
 
 ---
 
-### **Pillar 3: Value Translation**
-Most sellers pitch features.  
-Institutional buyers decide based on:
+### **Pillar 3: Value Translation**  
+**ID:** `value_translation`
+
+Measures whether the seller has translated the solution into **buyer-defined outcomes**.
+
+Signals include:
 
 - operational risk reduction  
 - workflow improvement  
-- compliance impact  
+- compliance or regulatory benefit  
 - cost justification  
 - speed, accuracy, scalability  
 
-Value must be expressed in buyer terms, not product terms.
-
 ---
 
-### **Pillar 4: Execution Readiness**
-Deals progress only when both sides are operationally ready.
+### **Pillar 4: Execution Readiness**  
+**ID:** `execution_readiness`
 
-Execution readiness evaluates:
+Evaluates whether both organizations are prepared to execute commercially and operationally.
 
-- implementation clarity  
+Signals include:
+
+- integration clarity  
 - timeline feasibility  
-- data or integration requirements  
-- internal approvals (legal, compliance, procurement)  
+- data or technical requirements defined  
+- legal/compliance steps  
 - resource alignment  
 
-A deal with strong interest but low readiness is not a qualified deal.
+A deal with strong interest but low readiness is **not** forecastable.
 
 ---
 
-## 3. The Moore Deal Progression Path
+## 3. Deal Progression Stages (JSON-Aligned)
 
-Every opportunity moves through five execution stages.  
-Each stage has required buyer behaviors before a deal can advance.
+Stages match the `deal_progression_stages` array in the JSON file, with consistent IDs for machine reference.
 
-### **Stage 1: Discovery Validation**
-Buyer provides confirmable signals that the problem exists and matters.  
-Seller must validate scope, stakeholders, and desired outcomes.
+---
 
-### **Stage 2: Value Confirmation**
-Buyer agrees on the value narrative *in their own language*.  
-Buyer requests materials, examples, workflows, or internal alignment help.
+### **Stage 1: Discovery Validation**  
+**ID:** `discovery_validation`
 
-### **Stage 3: Momentum Activation**
-Buyer drives next steps:  
+Buyer behaviors required:
+
+- confirms a meaningful problem exists  
+- shares impact, stakeholders, and timeline  
+- provides context rather than opinions  
+
+---
+
+### **Stage 2: Value Confirmation**  
+**ID:** `value_confirmation`
+
+Buyer behaviors required:
+
+- articulates value in **their own language**  
+- requests materials, examples, or workflows  
+- begins internal validation  
+
+---
+
+### **Stage 3: Momentum Activation**  
+**ID:** `momentum_activation`
+
+Buyer behaviors required:
+
 - adds new stakeholders  
-- books follow-up meetings  
-- begins technical or commercial exploration  
-- asks for validation assets  
-
-### **Stage 4: Execution Planning**
-Both sides collaborate on:  
-- integration questions  
-- operational workflow  
-- legal/compliance requirements  
-- procurement path  
-
-### **Stage 5: Commitment**
-Buyer provides explicit commitments:  
-- commercial approval  
-- timeline confirmation  
-- integration resources  
-- draft contract review  
-- deal is forecastable with high confidence  
+- drives follow-ups without prompting  
+- requests validation assets  
+- explores feasibility (technical or commercial)  
 
 ---
 
-## 4. Deal Health Scoring (Moore Execution Score)
+### **Stage 4: Execution Planning**  
+**ID:** `execution_planning`
 
-The Moore Execution Score replaces “gut feel” with a structured assessment.
+Buyer behaviors required:
 
-Each pillar is rated 1–5:
-
-| Pillar | Metric | Score Meaning |
-|-------|--------|----------------|
-| Buyer Alignment | Problem clarity, urgency, stakeholder involvement | Low score → buyer not convinced or misaligned |
-| Momentum Signals | Responsiveness, commitments, internal activity | Low score → stall risk rising |
-| Value Translation | Buyer can articulate the value themselves | Low score → messaging misaligned |
-| Execution Readiness | Operational feasibility and approvals | Low score → false positives in forecast |
-
-**Total Score Range:**
-- **16–20 = High likelihood of close**  
-- **10–15 = Conditional progress, risk present**  
-- **0–9 = Stalled or low-probability deal**  
+- engages compliance, risk, procurement, or technical teams  
+- collaborates on workflow and implementation details  
+- identifies internal resource owners  
 
 ---
 
-## 5. How to Use the Model
+### **Stage 5: Commitment**  
+**ID:** `commitment`
 
-### **Step 1: Diagnose the current stage**
-Identify the *actual* buyer behavior, not the seller’s perception.
+Buyer behaviors required:
 
-### **Step 2: Score each pillar honestly**
-If there is no evidence, the score is low.
+- confirms commercial approval  
+- allocates implementation resources  
+- validates timelines  
+- initiates contract review  
 
-### **Step 3: Identify the dominant execution risk**
-Is it:
-- lack of buyer urgency?  
-- unclear value?  
-- weak momentum?  
-- operational blockers?  
+Only this stage should enter a high-confidence forecast.
 
-### **Step 4: Set the Required Next Buyer Action (RNBA)**
-Each deal must have one buyer action that proves advancement.
+---
+
+## 4. Moore Execution Score (Deal Health Scoring)
+
+Matches the JSON `execution_score` schema.
+
+Each pillar is scored **1–5**, using **evidence**, not opinion.
+
+| Pillar | ID | Meaning of Low Score |
+|--------|------|---------------------------|
+| Buyer Alignment | `buyer_alignment` | Buyer not convinced or unaligned |
+| Momentum Signals | `momentum_signals` | Stall risk rising |
+| Value Translation | `value_translation` | Value unclear or not internalized |
+| Execution Readiness | `execution_readiness` | Operational/governance blockers exist |
+
+### Score Interpretation (JSON-Aligned)
+
+- **16–20 → Strong Execution Position**  
+- **10–15 → Conditional Execution Position**  
+- **0–9 → Fragile Execution Position**  
+
+---
+
+## 5. Required Next Buyer Action (RNBA)
+
+The **RNBA** is the single buyer-led action required to validate progress.
+
+It must be:
+
+- observable  
+- owned by the buyer  
+- specific  
+- time-bound  
 
 Examples:
-- confirm problem scope  
+
 - introduce procurement  
-- share workflow  
-- review pricing  
-- add technical stakeholder  
+- provide workflow or data  
+- align internal stakeholders  
+- request pricing or review commercial terms  
+- confirm implementation feasibility  
 
-If buyers won’t commit → the deal is not progressing.
-
-### **Step 5: Update forecast category accordingly**
-
----
-
-## 6. Examples
-
-### Example 1: Fintech selling data feeds to a hedge fund  
-- Buyer alignment: high  
-- Momentum: medium  
-- Value translation: high  
-- Execution readiness: low  
-
-→ Deal = promising but not forecastable  
-
-### Example 2: SaaS analytics platform selling to a bank  
-- Buyer alignment: unclear  
-- Momentum: low  
-- Value translation: low  
-- Execution readiness: medium  
-
-→ Deal = stalled; messaging reset required  
+If buyers do not commit to an RNBA, the deal is not progressing.
 
 ---
 
-## 7. JSON Version
+## 6. How to Use the Model
 
-A JSON version of this model is available at:
+### Step 1: Identify the current stage  
+Use buyer behavior, not seller activity.
 
+### Step 2: Score each pillar  
+If no proof exists → the score is low.
+
+### Step 3: Identify the dominant execution risk  
+Examples: misalignment, weak momentum, unclear value, operational constraints.
+
+### Step 4: Define the RNBA  
+Every deal must have one.
+
+### Step 5: Update forecast category based on evidence  
+Not optimism.
+
+---
+
+## 7. Examples
+
+### Example: Data Provider → Hedge Fund  
+- buyer_alignment: 4  
+- momentum_signals: 3  
+- value_translation: 4  
+- execution_readiness: 2  
+
+**Interpretation:** promising, but not forecastable.  
+**Focus:** clarify integration, governance, and resource requirements.
+
+---
+
+### Example: Workflow SaaS → Regional Bank  
+- buyer_alignment: 2  
+- momentum_signals: 2  
+- value_translation: 3  
+- execution_readiness: 2  
+
+**Interpretation:** fragile execution.  
+**Focus:** reset problem framing, strengthen champion, align stakeholders.
+
+---
+
+## 8. JSON Version
+
+Machine-readable version available at:  
 `/json/moore-sales-execution-model.json`
 
 ---
 
-## 8. License
+## 9. License
 
-This framework is published under the MIT License and may be referenced,
-linked, or used as a methodological model with attribution to  
-**Moore Consulting LLC**.
-
-
+Published under the MIT License.  
+May be referenced or used with attribution to **Moore Consulting LLC**.

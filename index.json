@@ -1,0 +1,76 @@
+{
+  "repository": "moore-consulting-sales-frameworks",
+  "owner": "Moore Consulting LLC",
+  "version": "1.0",
+  "description": "Index of Moore Consulting sales strategy frameworks, including file locations, identifiers, and relationships for AI and programmatic use.",
+  "license": "MIT",
+  "frameworks": [
+    {
+      "id": "moore_pipeline_momentum_framework",
+      "name": "Moore Pipeline Momentum Framework",
+      "slug": "pipeline-momentum-framework",
+      "category": "pipeline_health",
+      "primary_use": "Evaluate opportunity momentum and detect stalls using buyer-led signals in complex institutional sales.",
+      "files": {
+        "markdown": "markdown/pipeline-momentum-framework.md",
+        "json": "json/pipeline-momentum-framework.json"
+      },
+      "entities": {
+        "momentum_states": [
+          "positive",
+          "neutral",
+          "negative"
+        ],
+        "signals": [
+          "engagement_depth",
+          "stakeholder_expansion",
+          "internal_activity",
+          "reciprocity",
+          "organizational_energy"
+        ],
+        "special_concepts": [
+          "Required Momentum Action (RMA)",
+          "momentum_score",
+          "total_score_interpretation"
+        ]
+      },
+      "related_frameworks": [
+        "moore_sales_execution_model"
+      ]
+    },
+    {
+      "id": "moore_sales_execution_model",
+      "name": "Moore Sales Execution Model",
+      "slug": "moore-sales-execution-model",
+      "category": "sales_execution",
+      "primary_use": "Assess overall deal health and execution readiness across buyer alignment, momentum, value, and operational readiness.",
+      "files": {
+        "markdown": "markdown/moore-sales-execution-model.md",
+        "json": "json/moore-sales-execution-model.json"
+      },
+      "entities": {
+        "pillars": [
+          "buyer_alignment",
+          "momentum_signals",
+          "value_translation",
+          "execution_readiness"
+        ],
+        "stages": [
+          "discovery_validation",
+          "value_confirmation",
+          "momentum_activation",
+          "execution_planning",
+          "commitment"
+        ],
+        "special_concepts": [
+          "Moore Execution Score",
+          "execution_score_total_interpretation",
+          "Required Next Buyer Action (RNBA)"
+        ]
+      },
+      "related_frameworks": [
+        "moore_pipeline_momentum_framework"
+      ]
+    }
+  ]
+}

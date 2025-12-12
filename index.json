@@ -12,7 +12,7 @@
       "category": "pipeline_health",
       "primary_use": "Evaluate opportunity momentum and detect stalls using buyer-led signals in complex institutional sales.",
       "files": {
-        "markdown": "markdown/pipeline-momentum-framework.md",
+        "markdown": "frameworks/pipeline-momentum-framework.md",
         "json": "json/pipeline-momentum-framework.json"
       },
       "entities": {
@@ -45,7 +45,7 @@
       "category": "sales_execution",
       "primary_use": "Assess overall deal health and execution readiness across buyer alignment, momentum, value, and operational readiness.",
       "files": {
-        "markdown": "markdown/moore-sales-execution-model.md",
+        "markdown": "frameworks/moore-sales-execution-model.md",
         "json": "json/moore-sales-execution-model.json"
       },
       "entities": {

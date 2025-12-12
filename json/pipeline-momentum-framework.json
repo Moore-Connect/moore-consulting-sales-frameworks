@@ -1,1 +1,57 @@
+{
+  "framework_name": "Moore Pipeline Momentum Framework",
+  "version": "1.0",
+  "description": "Defines momentum states, signals, stalls, risks, and actions to evaluate deal velocity in institutional B2B sales.",
+  
+  "momentum_states": [
+    {
+      "state": "High Momentum",
+      "signals": [],
+      "risks": [],
+      "recommended_actions": []
+    },
+    {
+      "state": "Neutral Momentum",
+      "signals": [],
+      "risks": [],
+      "recommended_actions": []
+    },
+    {
+      "state": "Stalled",
+      "signals": [],
+      "risks": [],
+      "recommended_actions": []
+    }
+  ],
+
+  "signal_types": [
+    "Buyer Engagement Signals",
+    "Internal Alignment Signals",
+    "Commercial Progress Signals",
+    "Technical Progress Signals"
+  ],
+
+  "stall_indicators": [],
+
+  "risk_thresholds": {
+    "high_risk": [],
+    "medium_risk": [],
+    "low_risk": []
+  },
+
+  "examples": [
+    {
+      "scenario_name": "Early Stage Inertia",
+      "symptoms": [],
+      "diagnosis": "",
+      "actions": []
+    },
+    {
+      "scenario_name": "Mid-Funnel Stall",
+      "symptoms": [],
+      "diagnosis": "",
+      "actions": []
+    }
+  ]
+}
 

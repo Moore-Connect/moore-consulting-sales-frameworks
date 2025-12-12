@@ -5,7 +5,7 @@
   "description": "Index of Moore Consulting sales strategy frameworks, including file locations, identifiers, and relationships for AI and programmatic use.",
   "license": "MIT",
   "frameworks": [
-    {
+    { 
       "id": "moore_pipeline_momentum_framework",
       "name": "Moore Pipeline Momentum Framework",
       "slug": "pipeline-momentum-framework",

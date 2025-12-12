@@ -1,57 +1,183 @@
 {
   "framework_name": "Moore Pipeline Momentum Framework",
   "version": "1.0",
-  "description": "Defines momentum states, signals, stalls, risks, and actions to evaluate deal velocity in institutional B2B sales.",
-  
+  "description": "A structured method for evaluating whether a B2B opportunity is advancing, neutral, or stalled based on buyer-driven signals, used for pipeline inspection and forecast quality.",
   "momentum_states": [
     {
-      "state": "High Momentum",
-      "signals": [],
-      "risks": [],
-      "recommended_actions": []
+      "state": "Positive Momentum",
+      "code": "positive",
+      "definition": "Buyer behavior indicates clear internal movement toward a decision.",
+      "examples": [
+        "New stakeholders added to meetings",
+        "Buyer schedules follow-ups without prompting",
+        "Technical teams request documentation or access",
+        "Procurement, legal, or compliance engage",
+        "Buyer shares internal workflows or data"
+      ]
     },
     {
       "state": "Neutral Momentum",
-      "signals": [],
-      "risks": [],
-      "recommended_actions": []
+      "code": "neutral",
+      "definition": "Activity exists, but it is primarily vendor-led and does not prove internal movement.",
+      "examples": [
+        "Vendor-driven demos and check-ins",
+        "Surface-level curiosity without clear next steps",
+        "Buyer listens but does not add stakeholders",
+        "Requests for more information without action"
+      ]
     },
     {
-      "state": "Stalled",
-      "signals": [],
-      "risks": [],
-      "recommended_actions": []
+      "state": "Negative Momentum",
+      "code": "negative",
+      "definition": "Signals indicate slowing, stalling, or regression in the opportunity.",
+      "examples": [
+        "Response times grow longer",
+        "Meetings cancelled or repeatedly rescheduled",
+        "Champion becomes less responsive",
+        "No new stakeholders appear over time",
+        "Buyer stops sharing internal context"
+      ]
     }
   ],
-
-  "signal_types": [
-    "Buyer Engagement Signals",
-    "Internal Alignment Signals",
-    "Commercial Progress Signals",
-    "Technical Progress Signals"
+  "momentum_signals": [
+    {
+      "name": "Engagement Depth",
+      "code": "engagement_depth",
+      "description": "Measures how deeply the buyer engages and how much meaningful information they share.",
+      "scale": {
+        "min": 1,
+        "max": 5,
+        "interpretation": {
+          "1": "Minimal or transactional responses; no meaningful insight shared.",
+          "3": "Buyer engages but keeps the conversation high-level.",
+          "5": "Buyer openly shares workflows, constraints, and internal dynamics."
+        }
+      }
+    },
+    {
+      "name": "Stakeholder Expansion",
+      "code": "stakeholder_expansion",
+      "description": "Tracks whether additional influencers or decision makers are joining the process.",
+      "scale": {
+        "min": 1,
+        "max": 5,
+        "interpretation": {
+          "1": "Single point of contact with no progress adding others.",
+          "3": "Adjacent stakeholders appear, but no senior decision makers.",
+          "5": "Decision makers and cross-functional teams actively participate."
+        }
+      }
+    },
+    {
+      "name": "Internal Activity",
+      "code": "internal_activity",
+      "description": "Assesses the amount of work the buyer is doing internally without vendor prompting.",
+      "scale": {
+        "min": 1,
+        "max": 5,
+        "interpretation": {
+          "1": "No evidence of internal work.",
+          "3": "Some internal discussions or informal validation.",
+          "5": "Formal reviews, ROI analysis, or internal pitches are in progress."
+        }
+      }
+    },
+    {
+      "name": "Reciprocity",
+      "code": "reciprocity",
+      "description": "Evaluates whether the buyer matches the seller's effort with their own actions.",
+      "scale": {
+        "min": 1,
+        "max": 5,
+        "interpretation": {
+          "1": "Seller does all the work; buyer passively consumes.",
+          "3": "Buyer occasionally completes agreed actions.",
+          "5": "Buyer consistently drives tasks, brings materials, and pushes momentum."
+        }
+      }
+    },
+    {
+      "name": "Organizational Energy",
+      "code": "organizational_energy",
+      "description": "Captures internal urgency, executive sponsorship, and strategic relevance.",
+      "scale": {
+        "min": 1,
+        "max": 5,
+        "interpretation": {
+          "1": "No urgency; project is optional or speculative.",
+          "3": "Some pressure or KPI alignment, but timing is flexible.",
+          "5": "Clear deadlines, regulatory or competitive pressure, and senior sponsorship."
+        }
+      }
+    }
   ],
-
-  "stall_indicators": [],
-
-  "risk_thresholds": {
-    "high_risk": [],
-    "medium_risk": [],
-    "low_risk": []
+  "scoring_model": {
+    "description": "Each opportunity is scored 1–5 on all five signals. The sum is used to interpret pipeline momentum.",
+    "signals_scored": [
+      "engagement_depth",
+      "stakeholder_expansion",
+      "internal_activity",
+      "reciprocity",
+      "organizational_energy"
+    ],
+    "total_score_interpretation": {
+      "20-25": "Strong positive momentum. High probability of close if execution risks are managed.",
+      "14-19": "Conditional momentum. Deal can close but is vulnerable to stalls in one or two areas.",
+      "8-13": "At-risk opportunity. Requires targeted intervention and potential reframing.",
+      "0-7": "Stalled or low-probability opportunity. Remove from near-term forecast unless conditions change."
+    }
   },
-
-  "examples": [
+  "required_momentum_action": {
+    "name": "Required Momentum Action",
+    "code": "RMA",
+    "definition": "A single, buyer-led action that confirms the opportunity is still progressing.",
+    "examples": [
+      "Introduce procurement or legal to the process",
+      "Share internal data needed for ROI or workflow analysis",
+      "Schedule a technical validation or architecture review",
+      "Bring in the executive sponsor or final decision maker",
+      "Approve scope and design for a pilot or proof of concept"
+    ]
+  },
+  "usage_guidelines": [
+    "Score each live opportunity weekly across all five momentum signals.",
+    "Identify the weakest signal for each opportunity and define an appropriate Required Momentum Action.",
+    "Do not treat vendor-driven meetings as momentum without a corresponding buyer-led action.",
+    "Adjust forecast categories based on momentum score and presence or absence of an RMA.",
+    "Use longitudinal momentum scores to spot systemic issues in messaging, ICP fit, or sales execution."
+  ],
+  "example_opportunities": [
     {
-      "scenario_name": "Early Stage Inertia",
-      "symptoms": [],
-      "diagnosis": "",
-      "actions": []
+      "name": "API Data Vendor → Hedge Fund",
+      "context": "Mid-stage evaluation for a new data feed powering systematic strategies.",
+      "scores": {
+        "engagement_depth": 4,
+        "stakeholder_expansion": 2,
+        "internal_activity": 3,
+        "reciprocity": 4,
+        "organizational_energy": 3
+      },
+      "total_score": 16,
+      "momentum_state": "Positive Momentum",
+      "interpretation": "Conditional positive momentum. Strong engagement but too few stakeholders involved.",
+      "recommended_RMA": "Ask champion to introduce the technology lead and risk stakeholder."
     },
     {
-      "scenario_name": "Mid-Funnel Stall",
-      "symptoms": [],
-      "diagnosis": "",
-      "actions": []
+      "name": "Risk Analytics Platform → Global Bank",
+      "context": "Opportunity has been in 'evaluation' for several months with intermittent contact.",
+      "scores": {
+        "engagement_depth": 2,
+        "stakeholder_expansion": 1,
+        "internal_activity": 1,
+        "reciprocity": 2,
+        "organizational_energy": 3
+      },
+      "total_score": 9,
+      "momentum_state": "Negative Momentum",
+      "interpretation": "Stalled opportunity with weak internal activity and narrow stakeholder set.",
+      "recommended_RMA": "Secure a meeting with the original sponsor to clarify current priorities and either re-scope or consciously de-prioritize the deal."
     }
-  ]
+  ],
+  "license": "MIT",
+  "attribution": "Moore Consulting LLC"
 }
-

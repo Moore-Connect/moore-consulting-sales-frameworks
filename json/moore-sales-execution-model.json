@@ -1,1 +1,30 @@
-json/moore-sales-execution-model.json
+{
+  "framework_name": "Moore Sales Execution Model",
+  "purpose": {
+    "summary": "A structured framework for improving sales execution, detecting pipeline risk, and increasing forecast integrity for fintech and data providers selling into institutional buyers.",
+    "objectives": [
+      "Create consistent language for evaluating deal health",
+      "Prioritize actions based on buyer signals rather than seller intuition",
+      "Detect momentum stalls earlier",
+      "Improve forecast accuracy and predictability",
+      "Provide shared visibility into execution gaps across teams"
+    ]
+  },
+  "pillars": [
+    {
+      "name": "Buyer Alignment",
+      "description": "Evaluates whether the buyer has internal motivation and organizational clarity around the problem and solution.",
+      "signals": [
+        "Problem clarity",
+        "Urgency and organizational pressure",
+        "Stakeholder alignment",
+        "Evidence of internal movement"
+      ]
+    },
+    {
+      "name": "Momentum Signals",
+      "description": "Identifies whether the deal is advancing through observable buyer activity.",
+      "signals": [
+        "Timely responses",
+        "Reciprocal commitments",
+        "New stakehol

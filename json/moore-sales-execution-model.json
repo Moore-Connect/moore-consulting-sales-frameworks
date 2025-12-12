@@ -1,5 +1,6 @@
 {
   "framework_name": "Moore Sales Execution Model",
+  "version": "1.0",
   "purpose": {
     "summary": "A structured framework for improving sales execution, detecting pipeline risk, and increasing forecast integrity for fintech and data providers selling into institutional buyers.",
     "objectives": [
@@ -12,6 +13,7 @@
   },
   "pillars": [
     {
+      "id": "buyer_alignment",
       "name": "Buyer Alignment",
       "description": "Evaluates whether the buyer has internal motivation and organizational clarity around the problem and solution.",
       "signals": [
@@ -22,9 +24,178 @@
       ]
     },
     {
+      "id": "momentum_signals",
       "name": "Momentum Signals",
       "description": "Identifies whether the deal is advancing through observable buyer activity.",
       "signals": [
         "Timely responses",
         "Reciprocal commitments",
-        "New stakehol
+        "New stakeholders entering the process",
+        "Buyer-led next steps",
+        "Internal validation work underway"
+      ]
+    },
+    {
+      "id": "value_translation",
+      "name": "Value Translation",
+      "description": "Measures whether the seller has translated the offering into buyer-defined outcomes.",
+      "signals": [
+        "Operational risk reduction",
+        "Workflow improvement",
+        "Compliance or regulatory benefit",
+        "Cost justification",
+        "Speed and scalability impact"
+      ]
+    },
+    {
+      "id": "execution_readiness",
+      "name": "Execution Readiness",
+      "description": "Determines whether both teams are ready to execute commercially and operationally.",
+      "signals": [
+        "Integration clarity",
+        "Timeline feasibility",
+        "Data or technical requirements defined",
+        "Legal or compliance review underway",
+        "Resource alignment"
+      ]
+    }
+  ],
+  "deal_progression_stages": [
+    {
+      "id": "discovery_validation",
+      "stage": 1,
+      "name": "Discovery Validation",
+      "required_buyer_behaviors": [
+        "Confirms problem exists and is meaningful",
+        "Provides context on impact, stakeholders, and timeline"
+      ]
+    },
+    {
+      "id": "value_confirmation",
+      "stage": 2,
+      "name": "Value Confirmation",
+      "required_buyer_behaviors": [
+        "Articulates value in their own language",
+        "Requests materials, examples, or references",
+        "Begins seeking internal validation"
+      ]
+    },
+    {
+      "id": "momentum_activation",
+      "stage": 3,
+      "name": "Momentum Activation",
+      "required_buyer_behaviors": [
+        "Adds stakeholders from adjacent teams",
+        "Drives follow-up steps without vendor chasing",
+        "Explores commercial or technical feasibility"
+      ]
+    },
+    {
+      "id": "execution_planning",
+      "stage": 4,
+      "name": "Execution Planning",
+      "required_buyer_behaviors": [
+        "Engages procurement, legal, compliance, or technical teams",
+        "Collaborates on workflows, integration, and implementation timelines",
+        "Identifies internal resource owners"
+      ]
+    },
+    {
+      "id": "commitment",
+      "stage": 5,
+      "name": "Commitment",
+      "required_buyer_behaviors": [
+        "Provides commercial approval or budget confirmation",
+        "Confirms implementation resources and timelines",
+        "Advances to contract review and signature process"
+      ]
+    }
+  ],
+  "execution_score": {
+    "description": "Each opportunity is scored across the four execution pillars. The total score reflects overall deal health and readiness.",
+    "scoring_range": "1–5 per pillar",
+    "pillar_scoring": [
+      {
+        "id": "buyer_alignment",
+        "pillar": "Buyer Alignment",
+        "meaning_of_low_score": "Buyer is unconvinced, unclear, or misaligned on the problem, impact, or solution priority."
+      },
+      {
+        "id": "momentum_signals",
+        "pillar": "Momentum Signals",
+        "meaning_of_low_score": "Observable buyer activity is weak, inconsistent, or absent; deal may be stalling."
+      },
+      {
+        "id": "value_translation",
+        "pillar": "Value Translation",
+        "meaning_of_low_score": "Messaging is not resonating; buyer cannot clearly articulate the value or business outcome."
+      },
+      {
+        "id": "execution_readiness",
+        "pillar": "Execution Readiness",
+        "meaning_of_low_score": "Operational, technical, or governance blockers are unresolved, making execution unlikely in the near term."
+      }
+    ],
+    "total_score_interpretation": [
+      {
+        "id": "strong_execution",
+        "min": 16,
+        "max": 20,
+        "label": "Strong Execution Position",
+        "description": "High likelihood of close. Buyer is aligned, momentum is visible, value is clear, and execution paths are defined."
+      },
+      {
+        "id": "conditional_execution",
+        "min": 10,
+        "max": 15,
+        "label": "Conditional Execution Position",
+        "description": "Deal can close but one or two pillars are weak. Requires targeted intervention to reduce execution risk."
+      },
+      {
+        "id": "fragile_execution",
+        "min": 0,
+        "max": 9,
+        "label": "Fragile Execution Position",
+        "description": "Low probability or stalled opportunity. Multiple gaps across alignment, momentum, value, or readiness."
+      }
+    ]
+  },
+  "usage_steps": [
+    "Identify the current stage of the opportunity based on buyer behavior, not seller activity.",
+    "Score each execution pillar from 1–5 using observable evidence rather than opinion.",
+    "Identify the weakest pillar and define a specific action to strengthen it.",
+    "Confirm the Required Next Buyer Action (RNBA) that will validate progress.",
+    "Update forecast category and narrative based on pillar scores and buyer behavior.",
+    "Use trends across opportunities to identify systemic execution gaps in the sales process or messaging."
+  ],
+  "examples": [
+    {
+      "name": "Data Provider \u2192 Hedge Fund",
+      "context": "Selling a new dataset to support quantitative research and trading strategies.",
+      "pillar_scores": {
+        "buyer_alignment": 4,
+        "momentum_signals": 3,
+        "value_translation": 4,
+        "execution_readiness": 2
+      },
+      "total_score": 13,
+      "interpretation": "Buyer is aligned and sees value, but execution readiness is weak. Technical and governance paths are unclear.",
+      "recommended_focus": "Clarify integration path, data governance requirements, and implementation resources with technology and risk stakeholders."
+    },
+    {
+      "name": "Workflow SaaS \u2192 Regional Bank",
+      "context": "Digitizing a manual, spreadsheet-driven internal workflow.",
+      "pillar_scores": {
+        "buyer_alignment": 2,
+        "momentum_signals": 2,
+        "value_translation": 3,
+        "execution_readiness": 2
+      },
+      "total_score": 9,
+      "interpretation": "Execution is fragile. The buyer has not fully aligned stakeholders, and momentum is low.",
+      "recommended_focus": "Revisit the problem framing, strengthen the champion, and secure cross-functional alignment before advancing scope."
+    }
+  ],
+  "license": "MIT",
+  "attribution": "Moore Consulting LLC"
+}

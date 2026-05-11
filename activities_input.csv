@@ -1,0 +1,69 @@
+﻿deal_id,deal_name,activity_type,activity_date,activity_direction,contact_email,contact_role,task_status,task_due_date,note_body,associated_contacts
+D001,Hedge fund data feed,email,8/1/2025,outgoing,pm@alphahedge.com,portfolio_manager,,,,pm@alphahedge.com;ops@alphahedge.com;cto@alphahedge.com
+D001,Hedge fund data feed,call,8/3/2025,incoming,pm@alphahedge.com,portfolio_manager,,,,pm@alphahedge.com;ops@alphahedge.com;cto@alphahedge.com
+D001,Hedge fund data feed,task,8/4/2025,,,internal,open,8/10/2025,Prep follow-up pricing email,pm@alphahedge.com;ops@alphahedge.com;cto@alphahedge.com
+D001,Hedge fund data feed,task,8/12/2025,,,internal,open,8/11/2025,Chase feedback from PM,pm@alphahedge.com;ops@alphahedge.com;cto@alphahedge.com
+D001,Hedge fund data feed,note,8/12/2025,,,internal,,,Client asked for internal buy-in,pm@alphahedge.com;ops@alphahedge.com;cto@alphahedge.com
+,,,,,,,,,,
+D002,Bank risk platform,email,7/15/2025,outgoing,risk@bigbank.com,risk_manager,,,,risk@bigbank.com;procurement@bigbank.com;security@bigbank.com
+D002,Bank risk platform,meeting,7/18/2025,incoming,risk@bigbank.com,risk_manager,,,,risk@bigbank.com;procurement@bigbank.com;security@bigbank.com
+D002,Bank risk platform,task,7/19/2025,,,internal,completed,7/20/2025,Send security questionnaire,risk@bigbank.com;procurement@bigbank.com;security@bigbank.com
+D002,Bank risk platform,task,8/1/2025,,,internal,open,7/25/2025,Follow up with procurement,risk@bigbank.com;procurement@bigbank.com;security@bigbank.com
+D002,Bank risk platform,note,8/2/2025,,,internal,,,Procurement may slow deal,risk@bigbank.com;procurement@bigbank.com;security@bigbank.com
+,,,,,,,,,,
+D003,Vendor-led demo loop,meeting,7/10/2025,outgoing,cto@vendorco.com,technical_buyer,,,,cto@vendorco.com;vpeng@vendorco.com;buyer@clientco.com
+D003,Vendor-led demo loop,email,7/15/2025,outgoing,cto@vendorco.com,technical_buyer,,,,cto@vendorco.com;vpeng@vendorco.com;buyer@clientco.com
+D003,Vendor-led demo loop,task,7/20/2025,,,internal,open,7/22/2025,Confirm next steps,cto@vendorco.com;vpeng@vendorco.com;buyer@clientco.com
+D003,Vendor-led demo loop,task,8/5/2025,,,internal,open,7/30/2025,Schedule second demo,cto@vendorco.com;vpeng@vendorco.com;buyer@clientco.com
+,,,,,,,,,,
+D004,Fast-moving champion,call,8/5/2025,incoming,champion@fastco.com,business_owner,,,,champion@fastco.com;legal@fastco.com;finance@fastco.com
+D004,Fast-moving champion,meeting,8/7/2025,incoming,champion@fastco.com,business_owner,,,,champion@fastco.com;legal@fastco.com;finance@fastco.com
+D004,Fast-moving champion,email,8/8/2025,incoming,legal@fastco.com,legal,,,,champion@fastco.com;legal@fastco.com;finance@fastco.com
+D004,Fast-moving champion,task,8/8/2025,,,internal,completed,8/9/2025,Send contract,champion@fastco.com;legal@fastco.com;finance@fastco.com
+D004,Fast-moving champion,task,8/9/2025,,,internal,completed,8/9/2025,Loop in finance,champion@fastco.com;legal@fastco.com;finance@fastco.com
+,,,,,,,,,,
+D005,Executive sponsor no follow-through,email,7/22/2025,outgoing,svp@enterprise.com,executive_sponsor,,,,svp@enterprise.com;dir@enterprise.com;procurement@enterprise.com
+D005,Executive sponsor no follow-through,meeting,7/24/2025,incoming,svp@enterprise.com,executive_sponsor,,,,svp@enterprise.com;dir@enterprise.com;procurement@enterprise.com
+D005,Executive sponsor no follow-through,task,7/25/2025,,,internal,open,7/28/2025,Schedule broader stakeholder call,svp@enterprise.com;dir@enterprise.com;procurement@enterprise.com
+D005,Executive sponsor no follow-through,note,8/2/2025,,,internal,,,Sponsor enthusiastic but unresponsive,svp@enterprise.com;dir@enterprise.com;procurement@enterprise.com
+,,,,,,,,,,
+D006,Procurement engaged late,email,8/1/2025,incoming,procurement@midco.com,procurement,,,,procurement@midco.com;legal@midco.com;it@midco.com
+D006,Procurement engaged late,task,8/1/2025,,,internal,open,8/5/2025,Review MSA redlines,procurement@midco.com;legal@midco.com;it@midco.com
+D006,Procurement engaged late,task,8/7/2025,,,internal,open,8/6/2025,Follow up on redlines,procurement@midco.com;legal@midco.com;it@midco.com
+,,,,,,,,,,
+D007,Silent stall,email,6/10/2025,outgoing,analyst@quietco.com,analyst,,,,analyst@quietco.com;pm@quietco.com
+D007,Silent stall,task,6/15/2025,,,internal,open,6/20/2025,Check in after demo,analyst@quietco.com;pm@quietco.com
+D007,Silent stall,task,7/1/2025,,,internal,open,6/25/2025,Re-engage champion,analyst@quietco.com;pm@quietco.com
+,,,,,,,,,,
+D008,Reg-driven urgent project,meeting,8/10/2025,incoming,compliance@regco.com,compliance,,,,compliance@regco.com;legal@regco.com;security@regco.com;ops@regco.com
+D008,Reg-driven urgent project,email,8/11/2025,incoming,legal@regco.com,legal,,,,compliance@regco.com;legal@regco.com;security@regco.com;ops@regco.com
+D008,Reg-driven urgent project,task,8/11/2025,,,internal,completed,8/11/2025,Send implementation timeline,compliance@regco.com;legal@regco.com;security@regco.com;ops@regco.com
+D008,Reg-driven urgent project,task,8/12/2025,,,internal,completed,8/12/2025,Schedule kickoff,compliance@regco.com;legal@regco.com;security@regco.com;ops@regco.com
+D003,Vendor-led demo loop,meeting,7/10/2025,outgoing,cto@vendorco.com,technical_buyer,,,,cto@vendorco.com;vpeng@vendorco.com;buyer@clientco.com
+D003,Vendor-led demo loop,email,7/15/2025,outgoing,cto@vendorco.com,technical_buyer,,,,cto@vendorco.com;vpeng@vendorco.com;buyer@clientco.com
+D003,Vendor-led demo loop,task,7/20/2025,,,internal,open,7/22/2025,Confirm next steps,cto@vendorco.com;vpeng@vendorco.com;buyer@clientco.com
+D003,Vendor-led demo loop,task,8/5/2025,,,internal,open,7/30/2025,Schedule second demo,cto@vendorco.com;vpeng@vendorco.com;buyer@clientco.com
+,,,,,,,,,,
+D004,Fast-moving champion,call,8/5/2025,incoming,champion@fastco.com,business_owner,,,,champion@fastco.com;legal@fastco.com;finance@fastco.com
+D004,Fast-moving champion,meeting,8/7/2025,incoming,champion@fastco.com,business_owner,,,,champion@fastco.com;legal@fastco.com;finance@fastco.com
+D004,Fast-moving champion,email,8/8/2025,incoming,legal@fastco.com,legal,,,,champion@fastco.com;legal@fastco.com;finance@fastco.com
+D004,Fast-moving champion,task,8/8/2025,,,internal,completed,8/9/2025,Send contract,champion@fastco.com;legal@fastco.com;finance@fastco.com
+D004,Fast-moving champion,task,8/9/2025,,,internal,completed,8/9/2025,Loop in finance,champion@fastco.com;legal@fastco.com;finance@fastco.com
+,,,,,,,,,,
+D005,Executive sponsor no follow-through,email,7/22/2025,outgoing,svp@enterprise.com,executive_sponsor,,,,svp@enterprise.com;dir@enterprise.com;procurement@enterprise.com
+D005,Executive sponsor no follow-through,meeting,7/24/2025,incoming,svp@enterprise.com,executive_sponsor,,,,svp@enterprise.com;dir@enterprise.com;procurement@enterprise.com
+D005,Executive sponsor no follow-through,task,7/25/2025,,,internal,open,7/28/2025,Schedule broader stakeholder call,svp@enterprise.com;dir@enterprise.com;procurement@enterprise.com
+D005,Executive sponsor no follow-through,note,8/2/2025,,,internal,,,Sponsor enthusiastic but unresponsive,svp@enterprise.com;dir@enterprise.com;procurement@enterprise.com
+,,,,,,,,,,
+D006,Procurement engaged late,email,8/1/2025,incoming,procurement@midco.com,procurement,,,,procurement@midco.com;legal@midco.com;it@midco.com
+D006,Procurement engaged late,task,8/1/2025,,,internal,open,8/5/2025,Review MSA redlines,procurement@midco.com;legal@midco.com;it@midco.com
+D006,Procurement engaged late,task,8/7/2025,,,internal,open,8/6/2025,Follow up on redlines,procurement@midco.com;legal@midco.com;it@midco.com
+,,,,,,,,,,
+D007,Silent stall,email,6/10/2025,outgoing,analyst@quietco.com,analyst,,,,analyst@quietco.com;pm@quietco.com
+D007,Silent stall,task,6/15/2025,,,internal,open,6/20/2025,Check in after demo,analyst@quietco.com;pm@quietco.com
+D007,Silent stall,task,7/1/2025,,,internal,open,6/25/2025,Re-engage champion,analyst@quietco.com;pm@quietco.com
+,,,,,,,,,,
+D008,Reg-driven urgent project,meeting,8/10/2025,incoming,compliance@regco.com,compliance,,,,compliance@regco.com;legal@regco.com;security@regco.com;ops@regco.com
+D008,Reg-driven urgent project,email,8/11/2025,incoming,legal@regco.com,legal,,,,compliance@regco.com;legal@regco.com;security@regco.com;ops@regco.com
+D008,Reg-driven urgent project,task,8/11/2025,,,internal,completed,8/11/2025,Send implementation timeline,compliance@regco.com;legal@regco.com;security@regco.com;ops@regco.com
+D008,Reg-driven urgent project,task,8/12/2025,,,internal,completed,8/12/2025,Schedule kickoff,compliance@regco.com;legal@regco.com;security@regco.com;ops@regco.com

@@ -1,0 +1,9 @@
+deal_id,deal_name,engagement_depth,stakeholder_expansion,internal_activity,reciprocity,organizational_energy
+D001,Hedge fund data feed,3,2,3,3,5
+D002,Bank risk platform,3,2,3,4,3
+D003,Vendor-led demo loop,5,2,3,2,4
+D004,Fast-moving champion,5,3,3,4,5
+D005,Executive sponsor no follow-through,5,2,3,2,3
+D006,Procurement engaged late,3,2,3,1,4
+D007,Silent stall,1,3,2,1,1
+D008,Reg-driven urgent project,5,3,3,5,5
